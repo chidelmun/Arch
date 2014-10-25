@@ -1,5 +1,36 @@
 <html>
 <head>
+<style>
+      #map_canvas {
+        width: 1000px;
+        height: 350px;
+      }
+      strong{
+        color:#FFF;
+      }
+
+      p{
+        font-size: 28px;
+        color : black;
+      }
+
+    </style>
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script>
+      function initialize() {
+        var mapCanvas = document.getElementById('map_canvas');
+        var mapOptions = {
+          center: new google.maps.LatLng(4.0440619,9.7073865,18),
+          zoom: 15,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+        var map = new google.maps.Map(mapCanvas, mapOptions)
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+
+
+
 <title>Nous Contacter| Arche L'Eternel</title>
  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
      <link rel="stylesheet" type="text/css" href="css/custom.css">
@@ -24,11 +55,46 @@
         <ul class="nav nav-tabs pull-right">
           <li ><a style = "background-color: #050706; border: 1px solid #F82406;" href="index.html">Ecritures</a></li>
            <li class="text-muted"><a style = "background-color: #050706; border: 1px solid #F82406;" href="ecrits.html">Enseignments</a></li>
-          <li class="text-muted"><a style = "background-color: #050706; border: 1px solid #F82406;"  href="documents.html">Documentation</a></li>
+          <li class="text-muted"><a style = "background-color: #050706; border: 1px solid #F82406;"  href="documents.html">Adoration</a></li>
           <li class=" text-muted"><a style = "background-color: #050706; border: 1px solid #F82406;" href="news.html">Nouvelles</a></li>
           <li class=" active text-muted"><a style = "background-color: #050706; border: 1px solid #F82406;" href="contact.html">Contact</a></li>
         </ul>
         </div>
+      </div>
+
+
+
+      <div style="background-color: #A80303;" class="jumbotron img-responsive">
+    
+        <div class="jumbotron col-md-4" id="map_canvas"> 
+     </div>
+
+
+       <div class="col-md-4">
+        <strong>Info General</strong>
+        <p> ngodie rue de la joie derriere, Douala</br>
+          Cameroun
+        </p>
+       </div>
+
+         <div class="col-md-4">
+        <strong>Contact Telephone et Email</strong>
+        <p>Tel: 55525858-50767736
+        Email: arche_eternel@yahoo.fr
+      </p>
+       </div>
+
+         <div class="col-md-4">
+        <strong>Personnes</strong>
+        <p>
+       Mme la prophetesse Mbombo Clarisse Abigoelle
+      </p>
+
+       </div>
+
+       
+        
+        <p><a class="btn btn-lg btn-danger" href="index.html" role="button">Retour a L'Accueil</a></p>
       </div>
 
 
